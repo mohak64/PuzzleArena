@@ -14,7 +14,7 @@ import PageNotFound from './components/PageNotFound';
 import ContestPage from './components/ContestPage';
 import Dashboard from './Admin/Dashboard'
 import Puzzle1 from './components/puzzle2/puzzle2';
-import Puzzle1clue from './components/puzzle2/Puzzle1clue';
+import Puzzle1clue from './components/puzzle2/Clue1';
 
 
 

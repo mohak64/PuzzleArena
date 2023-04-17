@@ -1,22 +1,21 @@
 import React from "react";
 
-const Puzzle1clue = () => {
+import { Link, useNavigate } from "react-router-dom";
+const Clue1 = () => {
   return (
-<section className="py-10 sm:py-16 lg:py-24">
+    <>
+    <section className="py-10 sm:py-16 lg:py-24 bg-red-200 vh-100%">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto text-center">
           <div className="inline-flex px-4 py-1.5 mx-auto rounded-full bg-indigo-600">
             <p className="text-xs font-semibold tracking-widest text-white uppercase">
-              100+ Tailwind Components
+              Clue & Guide..
             </p>
           </div>
           <h2 className="mt-6 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
-            DevUI helps you build beautiful website
+            Here's a clue for solving a sliding puzzle
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-gray-600 dark:text-gray-300">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit.
-          </p>
+          <p className="mt-4 text-base leading-relaxed text-gray-600 dark:text-gray-300"></p>
         </div>
 
         <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-3 lg:mt-20 lg:gap-x-12">
@@ -38,12 +37,16 @@ const Puzzle1clue = () => {
               </svg>
 
               <h3 className="mt-8 text-lg font-semibold text-black">
-                Copy To Clipboard
+                Start by moving the pieces around the board to get a feel for
+                the puzzle. Try to move the pieces into rows or columns that are
+                in the correct order.
+                <br />
+                <br />
+                Focus on moving the corner pieces into their correct positions
+                first. Once the corners are in place, it's easier to move the
+                remaining pieces into their correct positions.
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
+              <p className="mt-4 text-base text-gray-600"></p>
             </div>
           </div>
 
@@ -65,12 +68,16 @@ const Puzzle1clue = () => {
               </svg>
 
               <h3 className="mt-8 text-lg font-semibold text-black">
-                Copy To Clipboard
+                Work on one section of the puzzle at a time. Break the puzzle
+                down into smaller sections and focus on getting each section in
+                the correct order before moving on to the next one.
+                <br />
+                <br />
+                Use a systematic approach to moving the pieces. For example, you
+                could start by moving the pieces in the top row from left to
+                right, then move to the second row and so on.
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
+              <p className="mt-4 text-base text-gray-600"></p>
             </div>
           </div>
 
@@ -92,18 +99,30 @@ const Puzzle1clue = () => {
               </svg>
 
               <h3 className="mt-8 text-lg font-semibold text-black">
-                Copy To Clipboard
+                Add a time limit to the puzzle to increase the sense of urgency
+                and challenge for the player.
+                <br />
+                <br />
+                Finally, don't be afraid to backtrack if you make a mistake. If
+                you get stuck, try undoing some of your moves and starting again
+                from a different position.
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
+              <p className="mt-4 text-base text-gray-600"></p>
             </div>
+            
           </div>
+          
+          
         </div>
+        
       </div>
+      <button className="mt-10 mx-auto text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+    <Link to="/Puzzle1">Solve Puzzle</Link>{" "}
+  </button>
     </section>
+    
+    </>
   );
 };
 
-export default Puzzle1clue;
+export default Clue1;
