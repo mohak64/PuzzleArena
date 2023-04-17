@@ -13,6 +13,11 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import ContestPage from './components/ContestPage';
 import Dashboard from './Admin/Dashboard'
+import Puzzle1 from './components/Puzzle1';
+
+
+
+
 import CreateContest from './Admin/CreateContest'
 import PastContest from './Admin/PastContest'
 import LeaderBoard from './Admin/LeaderBoard'
@@ -79,6 +84,10 @@ const router = createBrowserRouter([
     {
         path : '/ContestPage',
         element : <AuthorizeUser><ContestPage></ContestPage></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle1',
+        element : <AuthorizeUser><Puzzle1></Puzzle1></AuthorizeUser>
     },
     {
         path : '/reset',
