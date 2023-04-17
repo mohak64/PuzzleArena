@@ -4,7 +4,7 @@ import { updateURLParameter } from "./helpers";
 
 import { Link, useNavigate } from "react-router-dom";
 
-function puzzle2() {
+function Puzzle2() {
   const [imgUrl, setImgUrl] = useState("");
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function puzzle2() {
           Sliding puzzle
         </span>
       </h1>
-      <p class="mb-6 text-lg font-bold text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+      <p className="mb-8 mt-4  text-lg font-bold text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
         A sliding puzzle test is a type of puzzle game that involves sliding
         tiles within a grid in order to solve the puzzle.
         <br /> The goal is typically to arrange the tiles in a specific order,
@@ -51,4 +51,4 @@ function puzzle2() {
   );
 }
 
-export default puzzle2;
+export default Puzzle2;

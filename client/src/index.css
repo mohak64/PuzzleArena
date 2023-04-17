@@ -6,10 +6,7 @@
 
 
 
-.grad2 {
-    /* background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,100,29,1) 0%, rgba(252,176,69,1) 84%); */
-}
+
 
 body {
     margin: 0px;
@@ -783,15 +780,6 @@ button:hover .fourth {
     }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
-
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
@@ -799,7 +787,7 @@ code {
 }
 
 .App {
-    background-color:#ffffff;
+    background-color: #ffffff;
     display: grid;
     place-items: center;
     height: 100vh;
@@ -810,7 +798,7 @@ h1 {
 }
 
 .board {
-    
+
     position: relative;
     padding: 0;
 
@@ -831,3 +819,70 @@ button {
 
     display: block;
 }
+
+:root {
+    --color-correct: #6aaa64;
+    --color-absent: #787c7e;
+    --color-present: var(--color-present);
+    --key-bg: #d3d6da;
+    --bg-black-color: #ffffff;
+    --app-color: #000000;
+    --modal-content-bg: #ffffff;
+    --color-tone-4: #d3d6da;
+    --color-tone-2: #787c7e;
+    --spellingBeeYellow: #f7da21;
+    --cube-border: #d3d6da;
+    --hover-color: #f4f4f4;
+    --navbar-color: #5a6767;
+    --navbar-active-color: #000;
+}
+
+[data-theme="dark"] {
+    --color-correct: #538d4e;
+    --color-absent: #3a3a3c;
+    --color-present: #b59f3b;
+    --key-bg: #818384;
+    --bg-black-color: #121213;
+    --app-color: #FFFFFF;
+    --modal-content-bg: #121213;
+    --color-tone-4: #3a3a3c;
+    --color-tone-2: #818384;
+    --spellingBeeYellow: #f7da21;
+    --cube-border: #3a3a3c;
+    --hover-color: #2f2f31;
+    --navbar-color: hsla(0, 0%, 100%, .55);
+    --navbar-active-color: #fff;
+}
+
+[data-theme="light"] {
+    --color-correct: #6aaa64;
+    --color-absent: #787c7e;
+    --color-present: #c9b458;
+    --key-bg: #d3d6da;
+    --bg-black-color: #ffffff;
+    --app-color: #000000;
+    --modal-content-bg: #ffffff;
+    --color-tone-4: #d3d6da;
+    --color-tone-2: #787c7e;
+    --spellingBeeYellow: #f7da21;
+    --cube-border: #d3d6da;
+    --hover-color: #f4f4f4;
+    --navbar-color: #5a6767;
+    --navbar-active-color: #000;
+}
+
+[color-blind="yes"] {
+    --color-correct: #f5793a;
+    --color-absent: #787c7e;
+    --color-present: #85c0f9;
+    ;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

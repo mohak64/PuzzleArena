@@ -19,9 +19,7 @@ export default function ContestPage() {
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
-  function Puzzle1() {
-    navigate("/Puzzle1");
-  }
+  
 
   return (
     <>
@@ -29,14 +27,15 @@ export default function ContestPage() {
         <h1 className=" mt-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
             Puzzle Arena
-          </span  >
-          {" "}
+          </span>{" "}
           <span className="text-xl font-bold text-gray-900">
-          Start Puzzling!
+            Start Puzzling!
           </span>
         </h1>
         <p class="text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-        "Every puzzle has its own unique solution waiting to be discovered, and with each solved puzzle, you sharpen your mind and expand your perspective."
+          "Every puzzle has its own unique solution waiting to be discovered,
+          and with each solved puzzle, you sharpen your mind and expand your
+          perspective."
         </p>
       </div>
       <div className="p-5 pt-3 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5">
@@ -94,15 +93,14 @@ export default function ContestPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
             <div className="absolute left-4 bottom-4 text-left">
               <h1 className="text-xl text-white font-semibold">
-                "White Sneakers"
+                "Sliding Puzzle"
               </h1>
               <p className="text-gray-300 mt-2">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi, debitis?"
+              "The sliding puzzle is not just a game of rearranging pieces, it is a test of patience, strategy and determination to solve the seemingly impossible and emerge victorious."
               </p>
 
               <button className="text-base text-white cursor-pointer mt-2 font-semibold">
-                <Link to="/puzzle1">Login</Link>{" "}
+                <Link to="/puzzle2">Try Out..</Link>{" "}
               </button>
             </div>
           </div>

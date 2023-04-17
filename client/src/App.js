@@ -13,9 +13,10 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import ContestPage from './components/ContestPage';
 import Dashboard from './Admin/Dashboard'
-import Puzzle1 from './components/puzzle2/puzzle2';
-import Puzzle1clue from './components/puzzle2/Clue1';
-
+import Puzzle2 from './components/puzzle2/puzzle2';
+import Puzzle2clue from './components/puzzle2/Clue1';
+import Puzzle1 from './components/puzzle1/puzzle1';
+import Puzzle1clue from './components/puzzle1/Clue1';
 
 
 import CreateContest from './Admin/CreateContest'
@@ -84,6 +85,14 @@ const router = createBrowserRouter([
     {
         path : '/ContestPage',
         element : <AuthorizeUser><ContestPage></ContestPage></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle2',
+        element : <AuthorizeUser><Puzzle2></Puzzle2></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle2clue',
+        element : <AuthorizeUser><Puzzle2clue></Puzzle2clue></AuthorizeUser>
     },
     {
         path : '/Puzzle1',
