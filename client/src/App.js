@@ -13,8 +13,8 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import ContestPage from './components/ContestPage';
 import Dashboard from './Admin/Dashboard'
-import Puzzle1 from './components/Puzzle1';
-
+import Puzzle1 from './components/puzzle2/puzzle2';
+import Puzzle1clue from './components/puzzle2/Puzzle1clue';
 
 
 
@@ -88,6 +88,10 @@ const router = createBrowserRouter([
     {
         path : '/Puzzle1',
         element : <AuthorizeUser><Puzzle1></Puzzle1></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle1clue',
+        element : <AuthorizeUser><Puzzle1clue></Puzzle1clue></AuthorizeUser>
     },
     {
         path : '/reset',
