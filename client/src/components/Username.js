@@ -43,10 +43,11 @@ export default function Username() {
       <img src={Logo2} alt="..." height="6"/>
     </a> */}
           <img src={Logo} className={styles.profile_img2} alt="avatar" />
-            <h5 className='text-5xl font-bold my-1'>M.B.M University!</h5>
+            <h5 className='text-5xl font-bold my-1'>Puzzle Arena!</h5>
             </div>
             <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-              Official Contest Website.
+            Made with ❤️ by Mohak Bansal.<br/>
+            sometimes single click does not work,<br/> do multiple clicks!
             </span>
           </div>
 
