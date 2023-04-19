@@ -20,6 +20,8 @@ import Puzzle1clue from './components/puzzle1/Clue1';
 import Puzzle3 from './components/puzzle3/Puzzle3'
 import Puzzle3clue from './components/puzzle3/Clue3';
 
+import Puzzle4 from './components/puzzle4/Puzzle4'
+
 import CreateContest from './Admin/CreateContest'
 import PastContest from './Admin/PastContest'
 import LeaderBoard from './Admin/LeaderBoard'
@@ -110,6 +112,10 @@ const router = createBrowserRouter([
     {
         path : '/Puzzle3clue',
         element : <AuthorizeUser><Puzzle3clue></Puzzle3clue></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle4',
+        element : <AuthorizeUser><Puzzle4></Puzzle4></AuthorizeUser>
     },
     {
         path : '/reset',

@@ -144,7 +144,7 @@ export default function ContestPage() {
 
         {/* puzzle4 */}
         <div
-          key="2"
+          key="4"
           className="col-span-4 flex flex-col items-center text-center lg:col-span-1 lg:items-start lg:text-left"
         >
           <div
@@ -178,7 +178,7 @@ export default function ContestPage() {
 
         {/* puzzle5 */}
         <div
-          key="2"
+          key="5"
           className="col-span-4 flex flex-col items-center text-center lg:col-span-1 lg:items-start lg:text-left"
         >
           <div
