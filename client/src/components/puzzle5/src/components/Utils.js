@@ -1,5 +1,5 @@
 export const parseConfig = async () => {
-  const response = await fetch("http://localhost:3001/config.json");
+  const response = await fetch("https://esri.github.io/treasure-hunt-app/config.json");
   const json = await response.json();
   const args = parseArgs();
 
