@@ -23,6 +23,8 @@ import Puzzle3clue from './components/puzzle3/Clue3';
 import Puzzle4 from './components/puzzle4/Puzzle4'
 import Puzzle4clue from './components/puzzle4/Clue4';
 
+import Puzzle5 from './components/puzzle5/src/App'
+
 import CreateContest from './Admin/CreateContest'
 import PastContest from './Admin/PastContest'
 import LeaderBoard from './Admin/LeaderBoard'
@@ -121,6 +123,10 @@ const router = createBrowserRouter([
     {
         path : '/Puzzle4clue',
         element : <AuthorizeUser><Puzzle4clue></Puzzle4clue></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle5',
+        element : <AuthorizeUser><Puzzle5></Puzzle5></AuthorizeUser>
     },
     {
         path : '/reset',

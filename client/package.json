@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@arcgis/core": "^4.26.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@heroicons/react": "^2.0.17",
@@ -35,8 +36,7 @@
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build"
-},
-  
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -49,6 +49,7 @@
       "not dead",
       "not op_mini all"
     ],
+    "proxy": "http://localhost:8080",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
