@@ -1,4 +1,4 @@
-
+import view from "../../public/viewfinder.png"
 
 export const Instructions = ({onDismiss:dismiss}) => {
     return (
@@ -14,7 +14,7 @@ export const Instructions = ({onDismiss:dismiss}) => {
                     <ul>
                         <li>Use the map's pan/zoom functions to frame your guess location within the viewfinder circle.</li>
                         <li className="d-flex flex-column">
-                            <img className="align-self-center" alt="" src="./viewfinder.png"/>
+                            <img className="align-self-center" alt="" src={view}/>
                         </li>
                         <li>Circle color indicates whether you're getting hotter or colder!</li>
                         <li>Feel free to ask for a hint -- it won't cost you a thing.</li>

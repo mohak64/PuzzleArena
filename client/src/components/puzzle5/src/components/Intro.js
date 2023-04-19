@@ -31,12 +31,13 @@ export const Intro = ({
                     style={{
                         flexBasis: "50%",
                         maxWidth: "600px",
-                        backgroundImage: `url(${hero})`,
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                         maxHeight: "500px"
-                    }}>            
+                    }}>    
+                          
+                       <img src= "https://esri.github.io/treasure-hunt-app/statue_of_liberty.jpg" ></img> 
                 </div>
             </div>
         </div> /*intro*/
