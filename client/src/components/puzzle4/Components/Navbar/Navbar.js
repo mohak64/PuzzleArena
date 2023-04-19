@@ -9,7 +9,7 @@ function Navbar() {
   const {DisplayInstructions} = useContext(DataContext)
 
   return (
-    <Box container sx={{ display: "flex", height: "70px", boxShadow:"0 2px 10px rgba(23, 105, 170,0.7)" , padding: "10px",borderBottom: "thin solid #1769aa" }} >
+    <Box container sx={{ display: "flex", height: "80px", boxShadow:"0 2px 10px rgba(23, 105, 170,0.7)" , padding: "10px",borderBottom: "thin solid #1769aa" }} >
       <Box sx={{ height: "60px", width: "80px", borderRadius: "15%", alignContent: "center" }}>
         <BrainIcon height={60} width={70}  fill ={"rgb(23, 105, 170)"} />
       </Box>

@@ -21,6 +21,7 @@ import Puzzle3 from './components/puzzle3/Puzzle3'
 import Puzzle3clue from './components/puzzle3/Clue3';
 
 import Puzzle4 from './components/puzzle4/Puzzle4'
+import Puzzle4clue from './components/puzzle4/Clue4';
 
 import CreateContest from './Admin/CreateContest'
 import PastContest from './Admin/PastContest'
@@ -116,6 +117,10 @@ const router = createBrowserRouter([
     {
         path : '/Puzzle4',
         element : <AuthorizeUser><Puzzle4></Puzzle4></AuthorizeUser>
+    },
+    {
+        path : '/Puzzle4clue',
+        element : <AuthorizeUser><Puzzle4clue></Puzzle4clue></AuthorizeUser>
     },
     {
         path : '/reset',
