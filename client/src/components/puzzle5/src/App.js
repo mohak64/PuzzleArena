@@ -12,6 +12,8 @@ import { CongratsScreen } from "./components/CongratsScreen";
 import Multipoint from "@arcgis/core/geometry/Multipoint";
 import { Instructions } from "./components/Instructions";
 
+import { Link, useNavigate } from "react-router-dom";
+
 function App() {
   const [config, setConfig] = useState(null);
   const [scaleDenominator, setScaleDenominator] = useState(null);
@@ -182,15 +184,24 @@ function App() {
             >
               Instructions
             </button>
+
+            <button
+            type="button"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 border border-blue-700 rounded "
+            
+          >
+              <Link to="/contestpage">Puzzle Page</Link>{" "}
+          </button>
+
           </header>
 
           <section
             id="main"
-            className="flex-grow-1 d-flex flex-column flex-lg-row-reverse position-relative overflow-hidden pb-2"
+            className="flex-grow-1 flex flex-col lg:flex-row-reverse relative overflow-hidden pb-2"
           >
             {!hideCongratsScreen && (
               <CongratsScreen
-                className="position-absolute w-100 h-100"
+                className="absolute w-full h-full"
                 style={{ zIndex: 2000, backgroundColor: "rgba(0,0,0,0.6)" }}
                 title={config.title}
                 score={parseInt(calculateScore())}
@@ -201,7 +212,7 @@ function App() {
 
             {selectedQuestion && !hideIntro && (
               <Intro
-                className="position-absolute w-100 h-100 bg-white"
+                className="absolute w-full h-full bg-white"
                 style={{ zIndex: 2000 }}
                 title={config.title}
                 description={config.description}
@@ -214,7 +225,7 @@ function App() {
 
             {(!selectedQuestion || firstThreeSeconds) && (
               <Loader
-                className="position-absolute w-100 h-100"
+                className="absolute w-full h-full"
                 style={{ zIndex: 2000, backgroundColor: "rgba(0,0,0,0.6)" }}
                 title={config.title}
               ></Loader>
@@ -239,15 +250,15 @@ function App() {
             {selectedQuestion && (
               <div
                 id="controls"
-                className="w-100 flex-lg-grow-1 align-self-center align-self-lg-stretch overflow-hidden d-flex flex-column align-items-center p-2 p-lg-0"
+                className="w-full flex-lg-grow-1 self-center lg:self-stretch overflow-hidden flex flex-col items-center p-2 lg:p-0"
                 style={{ flexBasis: "60%" }}
               >
                 <div
-                  className="w-100 card flex-grow-1 d-flex flex-column overflow-hidden"
+                  className="w-full relative flex flex-col min-w-0 rounded break-words border bg-white border-1 border-gray-300 flex-grow-1 flex flex-col overflow-hidden"
                   style={{ border: "none" }}
                 >
                   <div
-                    className="card-header d-flex justify-content-between ps-4 pe-4"
+                    className="py-3 px-6 mb-0 bg-gray-200 border-b-1 border-gray-300 text-gray-900 flex justify-between ps-4 pe-4"
                     style={{ border: "none", background: "none" }}
                   >
                     <h3 className="h5">
@@ -263,7 +274,7 @@ function App() {
                   </div>
                   <div
                     id="question-image-1"
-                    className="w-100 align-self-center p-4 pt-1 mb-3"
+                    className="w-full self-center p-6 pt-1 mb-3"
                     style={{
                       flexBasis: "45%",
                       flexShrink: "0",
