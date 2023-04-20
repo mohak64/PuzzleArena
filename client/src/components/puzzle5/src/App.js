@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import "./components/viewfinder.css";
 import "./components/BalloonHelp.css";
 import "./App.css";

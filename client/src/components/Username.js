@@ -46,8 +46,8 @@ export default function Username() {
             <h5 className='text-5xl font-bold my-1'>Puzzle Arena!</h5>
             </div>
             <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-            Made with ❤️ by Mohak Bansal.<br/>
-            sometimes single click does not work,<br/> do multiple clicks!
+            Made with ❤️ by Mohak.<br/>
+            <span className='text-red-500'>Click on the text in the buttons!</span>
             </span>
           </div>
 

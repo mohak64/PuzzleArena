@@ -11,6 +11,7 @@ import puzzle2img from "../assets/puzzle2.jpeg";
 import puzzle1img from "../assets/puzzle1.jpeg";
 import puzzle3img from "../assets/puzzle3.jpeg";
 import puzzle4img from "../assets/puzzle4.jpeg";
+import puzzle5img from "../assets/puzzle5.jpeg";
 import styles from "../styles/Username.module.css";
 import extend from "../styles/Profile.module.css";
 import Ques from "./Ques";
@@ -194,23 +195,21 @@ export default function ContestPage() {
               }}
             >
               <img
-                src={puzzle2img}
+                src={puzzle5img}
                 alt="White Sneakers"
                 className="object-cover w-full h-full rounded-[10px] z-0"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
               <div className="absolute left-4 bottom-4 text-left">
                 <h1 className="text-xl text-white font-semibold">
-                  "Sliding Puzzle"
+                  "Treasure Hunt"
                 </h1>
                 <p className="text-gray-300 mt-2">
-                  "The sliding puzzle is not just a game of rearranging pieces,
-                  it is a test of patience, strategy and determination to solve
-                  the seemingly impossible and emerge victorious."
+                "Follow the winding river to where the ancient stones stand tall and you'll find the treasure at the heart of history."
                 </p>
 
                 <button className="mt-2 rounded-md bg-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-white hover:bg-indigo-500">
-                  <Link to="/puzzle2">Slide Now</Link>{" "}
+                  <Link to="/puzzle5">Let's Hunt</Link>{" "}
                 </button>
               </div>
             </div>
