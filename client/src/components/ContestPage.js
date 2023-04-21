@@ -18,6 +18,7 @@ import Ques from "./Ques";
 
 export default function ContestPage() {
   const [{ isLoading, apiData, serverError }] = useFetch2();
+  const navigate = useNavigate();
 
   if (isLoading) return (
   // <h1 className="text-2xl font-bold">isLoading</h1>
@@ -34,18 +35,36 @@ export default function ContestPage() {
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
+    function userLogout() {
+      localStorage.removeItem("token");
+      navigate("/");
+    }
+
   return (
+    
     <>
       <div className="bg-red-100 vh-100">
         <div className="container ">
-          <h1 className=" pt-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <h1 className=" pt-5 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
             <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
               Puzzle Arena
             </span>{" "}
+            
             <span className="text-xl font-bold text-gray-900">
               Start Puzzling!
+              
             </span>
+            <span onClick={userLogout} className="absolute top-2 right-5 text-xl font-bold text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800  rounded-lg  px-3 py-1 text-center mr-2 mb-2 cursor-pointer" to="/">
+                  Logout
+                </span>
+            
           </h1>
+          
+              
+                
+                
+              
+            
           <p class="mt-2 text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             "Every puzzle has its own unique solution waiting to be discovered,
             and with each solved puzzle, you sharpen your mind and expand your

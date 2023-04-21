@@ -6,7 +6,7 @@ import { profileValidation } from "../helper/validate";
 import convertToBase64 from "../helper/convert";
 import useFetch from "../hooks/fetch.hook";
 import { updateUser } from "../helper/helper";
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
 
 import styles from "../styles/Username.module.css";
 import extend from "../styles/Profile.module.css";
@@ -58,129 +58,142 @@ export default function Profile() {
     navigate("/ContestPage");
   }
 
-  if (isLoading) return (
-    // <h1 className="text-2xl font-bold">isLoading</h1>
-    <div id="inner" 
-                  className=" flex-column align-items-center position-relative overflow-hidden bg-white p-4 border-solid">
-                      
-                      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 960 560">
-                          <polyline className="zigzag" fill="none" stroke="#000000" strokeWidth="16" strokeMiterlimit="10" points="902 245.5 762.5 141.5 623.01 245.5 483.51 141.5 344.01 245.5 204.5 141.5 65 245.5 "/>
-                      </svg>
-                      
-              </div>
+  if (isLoading)
+    return (
+      // <h1 className="text-2xl font-bold">isLoading</h1>
+      <div
+        id="inner"
+        className=" flex-column align-items-center position-relative overflow-hidden bg-white p-4 border-solid"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="300"
+          height="100"
+          viewBox="0 0 960 560"
+        >
+          <polyline
+            className="zigzag"
+            fill="none"
+            stroke="#000000"
+            strokeWidth="16"
+            strokeMiterlimit="10"
+            points="902 245.5 762.5 141.5 623.01 245.5 483.51 141.5 344.01 245.5 204.5 141.5 65 245.5 "
+          />
+        </svg>
+      </div>
     );
   if (serverError)
     return <h1 className="text-xl text-red-500">{serverError.message}</h1>;
 
   return (
-    <div style={{ backgroundColor: "#f8ddfc", height:"120vh" }}>
-    <div className="container mx-auto">
-      <Toaster position="top-center" reverseOrder={false}></Toaster>
+    <div style={{ backgroundColor: "#f8ddfc", height: "120vh" }}>
+      <div className="container mx-auto">
+        <Toaster position="top-center" reverseOrder={false}></Toaster>
 
-      <div className="flex justify-center items-center h-auto py-4">
-        <div
-          className={`${styles.glass} ${extend.glass}`}
-          style={{ width: "45%", paddingTop: "3em" }}
-        >
-         
-        
-          <div className="title flex flex-col items-center">
-          
-              
-            <h4 className="text-5xl my-2 font-bold">Profile</h4>
-            <span className="py-4 text-xl w-2/3 text-center text-gray-500">
-              You can update the details.
-            </span>
-          </div>
-
-          <form className="py-1" onSubmit={formik.handleSubmit}>
-            <div className="profile flex justify-center py-4">
-              <label htmlFor="profile">
-                <img
-                  src={apiData?.profile || file || avatar}
-                  className={`${styles.profile_img} ${extend.profile_img}`}
-                  alt="avatar"
-                />
-              </label>
-
-              <input
-                onChange={onUpload}
-                type="file"
-                id="profile"
-                name="profile"
-              />
+        <div className="flex justify-center items-center h-auto py-4">
+          <div
+            className={`${styles.glass} ${extend.glass}`}
+            style={{ width: "45%", paddingTop: "3em" }}
+          >
+            <div className="title flex flex-col items-center">
+              <h4 className="text-5xl my-2 font-bold">Profile</h4>
+              <span className="py-4 text-xl w-2/3 text-center text-gray-500">
+                You can update the details.
+              </span>
             </div>
 
-            <div className="textbox flex flex-col items-center gap-6">
-              <div className="name flex w-3/4 gap-10">
-                <input
-                  {...formik.getFieldProps("firstName")}
-                  className={`${styles.textbox} ${extend.textbox}`}
-                  type="text"
-                  placeholder="FirstName"
-                />
-                <input
-                  {...formik.getFieldProps("lastName")}
-                  className={`${styles.textbox} ${extend.textbox}`}
-                  type="text"
-                  placeholder="LastName"
-                />
-              </div>
+            <form className="py-1" onSubmit={formik.handleSubmit}>
+              <div className="profile flex justify-center py-4">
+                <label htmlFor="profile">
+                  <img
+                    src={apiData?.profile || file || avatar}
+                    className={`${styles.profile_img} ${extend.profile_img}`}
+                    alt="avatar"
+                  />
+                </label>
 
-              <div className="name flex w-3/4 gap-10">
                 <input
-                  {...formik.getFieldProps("mobile")}
-                  className={`${styles.textbox} ${extend.textbox}`}
-                  type="text"
-                  placeholder="Mobile No."
-                />
-                <input
-                  {...formik.getFieldProps("email")}
-                  className={`${styles.textbox} ${extend.textbox}`}
-                  type="text"
-                  placeholder="Email*"
+                  onChange={onUpload}
+                  type="file"
+                  id="profile"
+                  name="profile"
                 />
               </div>
 
-              <input
-                {...formik.getFieldProps("address")}
-                className={`${styles.textbox} ${extend.textbox}`}
-                type="text"
-                placeholder="Address"
-              />
-              <button className={styles.btn} type="submit">
-                Update
-              </button>
-              <button className={styles.btn3} type="submit">
-          <div className="text-center py-2">
-                <span className='text-white-500'><Link className='text-white-500' to="/contestPage">Solve Puzzles</Link></span>
-              </div>
+              <div className="textbox flex flex-col items-center gap-6">
+                <div className="name flex w-3/4 gap-10">
+                  <input
+                    {...formik.getFieldProps("firstName")}
+                    className={`${styles.textbox} ${extend.textbox}`}
+                    type="text"
+                    placeholder="FirstName"
+                  />
+                  <input
+                    {...formik.getFieldProps("lastName")}
+                    className={`${styles.textbox} ${extend.textbox}`}
+                    type="text"
+                    placeholder="LastName"
+                  />
+                </div>
 
-              
+                <div className="name flex w-3/4 gap-10">
+                  <input
+                    {...formik.getFieldProps("mobile")}
+                    className={`${styles.textbox} ${extend.textbox}`}
+                    type="text"
+                    placeholder="Mobile No."
+                  />
+                  <input
+                    {...formik.getFieldProps("email")}
+                    className={`${styles.textbox} ${extend.textbox}`}
+                    type="text"
+                    placeholder="Email*"
+                  />
+                </div>
 
-              </button>
+                <input
+                  {...formik.getFieldProps("address")}
+                  className={`${styles.textbox} ${extend.textbox}`}
+                  type="text"
+                  placeholder="Address"
+                />
+                <button className={styles.btn} type="submit">
+                  Update
+                </button>
 
-              {/* <div className={styles.btn4}>
-                <span className='text-white-500 '><Link className='text-white-500' to="/">Dasboard</Link></span>
-              </div> */}
-
-            </div>
-
-            <div className="text-center py-4">
-              <span className="text-center text-gray-500">
-                come back later?
-                <button onClick={userLogout} className="text-center justify-center text-red-500" to="/">
-                  Logout
+                <button>
+                  <div className="text-center py-2 px-2">
+                    <span className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                      <Link to="/contestPage">
+                        Solve Puzzles
+                      </Link>
+                    </span>
+                  </div>
                 </button>
                 
-              </span>
+
+                {/* <div className={styles.btn4}>
+                <span className='text-white-500 '><Link className='text-white-500' to="/">Dasboard</Link></span>
+              </div> */}
+              </div>
               
-            </div>
-            
-          </form>
+
+              <div className="text-center py-2">
+                <span className="text-center text-gray-500">
+                  Come Back Later?
+                  <button
+                    onClick={userLogout}
+                    className="mx-auto text-red-500"
+                    to="/"
+                  >
+                    Logout
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
