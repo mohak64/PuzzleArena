@@ -23,7 +23,7 @@ export const Intro = ({
             backgroundColor: "rgba(255,255,255,0.8)",
           }}
         >
-          <div className="overflow-auto">
+          <div className="overflow-hidden">
             <h1 className="display-3 fw-bold mb-3">{title}</h1>
             <h2
               className=""
