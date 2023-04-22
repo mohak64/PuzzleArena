@@ -3,8 +3,15 @@ import cors from 'cors';
 import morgan from 'morgan';
 import connect from './database/conn.js';
 import router from './router/route.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 const app = express();
+
 
 /** middlewares */
 app.use(express.json());
@@ -23,6 +30,13 @@ app.get('/', (req, res) => {
 
 /** api routes */
 app.use('/api', router)
+
+//static files
+app.use(express.static(path.join(__dirname, '../client')))
+
+app.get('*',function(req,res){
+    res.sendFile(path.join(__dirname,'../client/public/index.html'))
+})
 
 // /** start server only when we have valid connection */
 connect().then(() => {
