@@ -28,27 +28,11 @@ function Dashboard() {
               className={`${styles.glass} ${extend.glass}`}
               style={{ width: "45%", paddingTop: "3em" }}
             >
-              <div className="title flex flex-col items-center">
-                <h4 className="text-5xl my-2 font-bold">Admin-Dashboard</h4>
-                <button className={styles.btn2} type="submit">
-                  <div className="text-center py-4">
-                    <span className="text-gray-500">
-                      <Link className="text-red-500" to="/CreateContest">
-                        Create Contest
-                      </Link>
-                    </span>
-                  </div>
-                </button>
+              <div className="title flex flex-col items-center m-4">
+                <h4 className="text-5xl my-2 font-bold mb-5">Admin-Dashboard</h4>
+                
 
-                <button className={styles.btn2} type="submit">
-                  <div className="text-center py-4 ">
-                    <span className="text-gray-500">
-                      <Link className="text-red-500" to="/PastContest">
-                        Past Contest
-                      </Link>
-                    </span>
-                  </div>
-                </button>
+               
                 <button className={styles.btn2} type="submit">
                   <div className="text-center py-4 ">
                     <span className="text-gray-500">
@@ -58,12 +42,12 @@ function Dashboard() {
                     </span>
                   </div>
                 </button>
-                <div className="text-center py-4">
+                <div className="text-center py-4 text-2xl">
                   <span className="text-gray-500">
-                    come back later?{" "}
+                    
                     <button
                       onClick={userLogout}
-                      className="text-red-500"
+                      className="text-center text-red-500"
                       to="/"
                     >
                       Logout

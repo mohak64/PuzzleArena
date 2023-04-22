@@ -27,7 +27,7 @@ import Puzzle5 from './components/puzzle5/src/App'
 
 import CreateContest from './Admin/CreateContest'
 import PastContest from './Admin/PastContest'
-import LeaderBoard from './Admin/LeaderBoard'
+import LeaderBoard from './Admin/LeaderBoard/LeaderBoard'
 import AdminRegister from './Admin/AdminRegister'
 import AdminLogin from './Admin/AdminLogin'
 import AdminPassword from './Admin/AdminPassword'
